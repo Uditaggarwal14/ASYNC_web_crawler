@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="icon" type="image/png" href="https://static.exam.net/img/2021/favicon-square.png">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta id="_token" name="csrf-token" content="pIk7mjb65UmZIYmf9YQbWY5SrWDFkJFX8yD7XJv1">
+  <meta name="google" value="notranslate" content="notranslate">
+  <title>Student - Exam.net</title>
+
+    <link rel="stylesheet" href="https://cdn2.exam.net/app/css/lib-exambuild.6a69ec158a67b6af4ba2483b5478e57b-exambuild.css">
+  <link rel="stylesheet" href="https://cdn2.exam.net/app/css/examnet-exambuild.0e60791ff6d2500138dda413fbd6ac0d-exambuild.css">
+  <link rel="stylesheet" href="https://cdn2.exam.net/app/css/vue-components-exambuild.5200928a04fd9aba794021d663bd4a6d-exambuild.css">
+  
+  <script>
+    window.dataLayer = window.dataLayer || [];
+  </script>
+
+  <!-- Ignore Vite directive -->
+  <style>
+    body {
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: var(--blue-gray-900);
+    }
+
+    .tabs-login {
+      border-radius: 15px;
+    }
+
+    .loadingMessage {
+      text-align: center;
+      font-size: 18px;
+      margin-top: 90px;
+      height: 90px;
+      font-family: sans-serif;
+      font-weight: 100;
+      display: none;
+    }
+
+  </style>
+
+  
+  </head>
+
+<body id="page-top">
+  
+  <div id="app" style="width: 100%;">
+    <div
+      style="display: flex; align-items: center; justify-content: center; top: 15px; position: absolute; width: 100%">
+      <img src="https://static.exam.net/img/2021/light-logo.png"
+        width="170"
+        alt="Exam.net logo" />
+    </div>
+    <student-language-selector style="left: var(--spacing-3); top: var(--spacing-5);"></student-language-selector>
+    <power-button :absolute="true" :seb="true"></power-button>
+    <keyboard-language></keyboard-language>
+
+    <div class="header-content">
+      <div class="header-content-inner">
+        <!-- Login field mockup, for fast initial load -->
+        <div v-if="false" class="login-body">
+          <article class="center-block"><section><div class="tab-content tabs-login" style="min-height: 198px;">
+            <div class="tab-pane active">
+              <h3 style="
+                text-align: center; font-size: 18px; padding-top: 60px;
+                height: 40px; font-family: sans-serif; font-weight: 100; display: none
+" 
+              id="loading-message"
+              >
+                Loading the application ...
+                <br><br><a href="/#quit">Close SEB</a>
+              </h3>
+            </div>
+          </section></article>
+        </div>
+        <student-login-form></student-login-form>
+      </div>
+    </div>
+
+    <exam-flash></exam-flash>
+
+    <div class="modal fade bs-modal-sm" id="offlineDataModal" tabindex="-1" role="dialog" aria-hidden="true"
+      style="display: none;">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title text-center">Offline data has been saved to the server</h3>
+          </div>
+
+          <div class="modal-body text-center" style="font-size: 15px; font-weight: normal">
+            <p>We found information in your browser which was not saved to the server. This has been automatically saved.</p>
+          </div>
+
+          <div class="modal-footer" style="text-align: center">
+            <button type="button" class="btn btn-lg btn-success" data-dismiss="modal">Ok</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="modals">
+      <div class="modal fade bs-modal-sm" id="offlineDataModal" tabindex="-1" role="dialog" aria-hidden="true"
+        style="display: none;">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title text-center">Offline data has been saved to the server</h3>
+            </div>
+            <div class="modal-body text-center" style="font-size: 15px; font-weight: normal">
+              <p>We found information in your browser which was not saved to the server. This has been automatically saved.</p>
+            </div>
+            <div class="modal-footer" style="text-align: center"><button type="button" class="btn btn-lg btn-success"
+                data-dismiss="modal">Ok</button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Only show the ugly loading-card if the app loading is actually slow
+    window.setTimeout(function() {
+      if (document.querySelector('#loading-message')) {
+        document.querySelector('#loading-message').style.display = 'block'
+      }
+    }, 4000);
+  </script>
+  <script src="https://cdn2.exam.net/app/js/lib-exambuild.0f2ad663d7072c322a00752c5074eae3-exambuild.js"></script>
+    <script defer src="https://cdn2.exam.net/app/js/app-exambuild.8fe742c9392361cd23560b2f58547f8f-exambuild.js"></script>
+  <script src="https://cdn2.exam.net/app/js/lang/en-exambuild.9bfaf9c59480c6b13cb15f3bc39c11af-exambuild.js"></script>
+    <script>
+    window.K$ = window.K$ || {};
+    window.K$.hostname = "exam.net";
+    window.K$.KM_API_URL = "https:\/\/api.km.se";
+
+    window.document.addEventListener('DOMContentLoaded', function() {
+      sendUndoneSaves()
+    });
+  </script>
+</body>
+
+</html>
