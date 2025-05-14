@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <meta id="_token" name="csrf-token" content="9vmPEg0oIlH7S2aKEEEbT2qiArMKDIaAdpRdGiHA">
+  <meta id="_token" name="csrf-token" content="mBFqioNb89r20SdOcZi5KXPPSCpKfly52g0SxxcL">
   <meta name="referrer" content="no-referrer-when-downgrade" />
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,7 +11,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Book a demo - Exam.net</title>
+  <title>Request pricing - Exam.net</title>
 
     <link rel="stylesheet" href="https://cdn2.exam.net/app/css/floating-vue-exambuild.abfe22a29c21f592fb22fa78529c4b1a-exambuild.css ">
   <link rel="stylesheet" href="https://cdn2.exam.net/app/css/variables-exambuild.c89a4c5bce610fa5b2ee187f496d9f77-exambuild.css">
@@ -33,7 +33,24 @@
     }
 
   </style>
-  
+  <style>
+  .text-exam {
+    color: #1d2d50;
+  }
+
+  .hover\:bg-exam-orange:hover {
+    background-color: #f99830;
+  }
+
+  .bg-exam {
+    background-color: #1d2d50;
+  }
+
+  .border-exam {
+    border-color: #1d2d50;
+  }
+</style>
+
   <script>
     window.dataLayer = window.dataLayer || [];
   </script>
@@ -45,8 +62,9 @@
 <body>
   <section id="app">
           <div class="container mx-auto md:px-20 -my-1 pb-12">
-          <exam-header></exam-header>
-  <book-demo></book-demo>
+            <exam-header></exam-header>
+    <quote-information-anonymous :quote='null'>
+    </quote-information-anonymous>
       </div>
     
       </section>
