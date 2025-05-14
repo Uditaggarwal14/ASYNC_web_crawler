@@ -151,9 +151,7 @@ async def main():
     end_time = time.time()
     
     print(f"Total time taken: {end_time - start_time} seconds")
-    print("hello")
 
-f
 if __name__ == "__main__":
     try:
         asyncio.run(main())
